@@ -1,0 +1,69 @@
+<!-- templates/forms.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crop Yield Predictor</title>
+    <style>
+        body {
+            background-color: #f1f8f4;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .form-container {
+            width: 420px;
+            margin: 80px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(0, 100, 0, 0.1);
+        }
+        h2 {
+            color: #2e7d32;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 15px;
+            display: block;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        button {
+            margin-top: 30px;
+            width: 100%;
+            padding: 12px;
+            background-color: #388e3c;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2e7d32;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>🌿 Crop Yield Predictor</h2>
+        <form action="/predict" method="post">
+            <label for="rainfall">🌧️ Rainfall (mm):</label>
+            <input type="number" name="rainfall" required>
+
+            <label for="fertilizer">🧪 Fertilizer (kg):</label>
+            <input type="number" name="fertilizer" required>
+
+            <label for="pesticides">🐛 Pesticides (litres):</label>
+            <input type="number" name="pesticides" required>
+
+            <button type="submit">🔍 Predict Yield</button>
+        </form>
+    </div>
+</body>
+</html>
